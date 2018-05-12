@@ -13,7 +13,7 @@ public class DiceGame {
 
 	public List<Integer> roll() {
 		Random random = new Random();
-		List<Integer> heapOfResults = new ArrayList<Integer>();
+		List<Integer> heapOfResults = new ArrayList<>();
 		for (int n = 1; n <= numberOfDice; n++) {
 			int throwResult = random.nextInt(sideCount) + 1;
 			heapOfResults.add(throwResult);
