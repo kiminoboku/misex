@@ -23,9 +23,9 @@ public class DiceGame {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Podaj liczbê koœci: (enter)");
+		System.out.println("Set the number of dice: (enter)");
 		int diceNumber = scanner.nextInt();
-		System.out.println("Podaj rodzaj koœci: (enter)");
+		System.out.println("Give the number of sides: (enter)");
 		int diceSides = scanner.nextInt();
 		List<Integer> rollResults = new DiceGame(diceNumber, diceSides).roll();
 		System.out.println("Oto Twoje wyniki:" + rollResults);
