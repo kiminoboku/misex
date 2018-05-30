@@ -4,9 +4,6 @@ import java.util.*;
 
 public class NeuroshimaAttributeSimulator {
 
-	public NeuroshimaAttributeSimulator() {
-	}
-
 	public List<Integer> roll() {
 		Random random = new Random();
 		List<Integer> highest5RollResults = new ArrayList<>();
