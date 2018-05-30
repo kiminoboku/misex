@@ -14,9 +14,10 @@ public class NeuroshimaAttributeSimulator {
 			int firstRollResult = random.nextInt(20) + 1;
 			int secondRollResult = random.nextInt(20) + 1;
 			int thirdRollResult = random.nextInt(20) + 1;
-			int averageRollResult = (firstRollResult + secondRollResult + thirdRollResult) / 3;
+			double averageRollResult = (firstRollResult + secondRollResult + thirdRollResult) / 3;
 			Math.ceil(averageRollResult);
-			highest5RollResults.add(averageRollResult);
+			int oneResult = (int) averageRollResult;
+			highest5RollResults.add(oneResult);
 		}
 		Collections.sort(highest5RollResults);
 		highest5RollResults.remove(0);
