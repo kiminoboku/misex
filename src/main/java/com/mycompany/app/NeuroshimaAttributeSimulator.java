@@ -4,9 +4,6 @@ import java.util.*;
 
 public class NeuroshimaAttributeSimulator {
 
-	public NeuroshimaAttributeSimulator() {
-	}
-
 	public List<Integer> roll() {
 		Random random = new Random();
 		List<Integer> highest5RollResults = new ArrayList<>();
@@ -15,7 +12,7 @@ public class NeuroshimaAttributeSimulator {
 			int secondRollResult = random.nextInt(20) + 1;
 			int thirdRollResult = random.nextInt(20) + 1;
 			double averageRollResult = (firstRollResult + secondRollResult + thirdRollResult) / 3;
-			Math.ceil(averageRollResult);
+			double averageRollResult = Math.ceil(averageRollResult);
 			int oneResult = (int) averageRollResult;
 			highest5RollResults.add(oneResult);
 		}
