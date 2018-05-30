@@ -4,6 +4,9 @@ import java.util.*;
 
 public class NeuroshimaAttributeSimulator {
 
+	public NeuroshimaAttributeSimulator() {
+	}
+
 	public List<Integer> roll() {
 		Random random = new Random();
 		List<Integer> highest5RollResults = new ArrayList<>();
@@ -12,8 +15,8 @@ public class NeuroshimaAttributeSimulator {
 			int secondRollResult = random.nextInt(20) + 1;
 			int thirdRollResult = random.nextInt(20) + 1;
 			double averageRollResult = (firstRollResult + secondRollResult + thirdRollResult) / 3;
-			double averageRollResult = Math.ceil(averageRollResult);
-			int oneResult = (int) averageRollResult;
+			double roundedAvg = Math.ceil(averageRollResult);
+			int oneResult = (int) roundedAvg;
 			highest5RollResults.add(oneResult);
 		}
 		Collections.sort(highest5RollResults);
@@ -23,6 +26,6 @@ public class NeuroshimaAttributeSimulator {
 
 	public static void main(String[] args) {
 		List<Integer> fiveAttributes = new NeuroshimaAttributeSimulator().roll();
-		System.out.println("This is your 5 highest roll for attributes" + fiveAttributes);
+		System.out.println("This is your 5 highest roll for attributes " + fiveAttributes);
 	}
 }
