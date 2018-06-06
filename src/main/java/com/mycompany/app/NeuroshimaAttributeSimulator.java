@@ -3,7 +3,6 @@ package com.mycompany.app;
 import java.util.*;
 
 public class NeuroshimaAttributeSimulator {
-	int index;
 
 	public List<Integer> roll() {
 		Random random = new Random();
@@ -19,6 +18,7 @@ public class NeuroshimaAttributeSimulator {
 		}
 		Collections.sort(highest5RollResults);
 		highest5RollResults.remove(0);
+
 		return highest5RollResults;
 	}
 
@@ -27,5 +27,13 @@ public class NeuroshimaAttributeSimulator {
 		System.out.println("This is your 5 highest roll for attributes " + fiveAttributes);
 		int rollSum = fiveAttributes.get(0) + fiveAttributes.get(1) + fiveAttributes.get(2) + fiveAttributes.get(3) + fiveAttributes.get(4);
 		System.out.println("The sum of your rolls equals: " + rollSum);
+		int sum = 0;
+		for (int startIndex = 0; startIndex <= fiveAttributes.size() - 1; startIndex++) {
+			int currentSum = Math.addExact(sum, fiveAttributes.get(startIndex));
+			sum = currentSum;
+			if (startIndex == fiveAttributes.size() - 1) {
+				System.out.println("2. the sum of your rolls equals: " + sum);
+			}
+		}
 	}
 }
