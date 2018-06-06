@@ -18,7 +18,6 @@ public class NeuroshimaAttributeSimulator {
 		}
 		Collections.sort(highest5RollResults);
 		highest5RollResults.remove(0);
-
 		return highest5RollResults;
 	}
 
