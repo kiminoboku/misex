@@ -27,11 +27,11 @@ public class NeuroshimaAttributeSimulator {
 		int rollSum = fiveAttributes.get(0) + fiveAttributes.get(1) + fiveAttributes.get(2) + fiveAttributes.get(3) + fiveAttributes.get(4);
 		System.out.println("The sum of your rolls equals: " + rollSum);
 		int sum = 0;
-		for (int startIndex = 0; startIndex <= fiveAttributes.size() - 1; startIndex++) {
-			int currentSum = Math.addExact(sum, fiveAttributes.get(startIndex));
+		for (int index = 0; index < fiveAttributes.size(); index++) {
+			int currentSum = Math.addExact(sum, fiveAttributes.get(index));
 			sum = currentSum;
-			if (startIndex == fiveAttributes.size() - 1) {
-				System.out.println("2. the sum of your rolls equals: " + sum);
+			if (index == fiveAttributes.size() - 1) {
+				System.out.println("2. The sum of your rolls equals: " + sum);
 			}
 		}
 	}
