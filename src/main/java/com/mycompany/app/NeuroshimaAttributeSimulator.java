@@ -18,6 +18,13 @@ public class NeuroshimaAttributeSimulator {
 		}
 		Collections.sort(highest5RollResults);
 		highest5RollResults.remove(0);
+		for (int index = 0; index <= 4; index++) {
+			if (highest5RollResults.get(index) < 6) {
+				highest5RollResults.remove(index);
+				highest5RollResults.add(index, 6);
+			}
+		}
+		Collections.sort(highest5RollResults);
 		return highest5RollResults;
 	}
 
